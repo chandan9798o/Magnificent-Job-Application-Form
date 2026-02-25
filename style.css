@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("purple.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.title_small{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 80px;
+    font-size: 40px;
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    
+    padding-top: 10px;
+    max-width: 900px;
+    margin: 10 auto;
+}
+.apply_box{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);   /* Transparent background */
+    backdrop-filter: blur(10px);           /* Blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(156, 80, 249, 0.836);
+}
+.form_container {
+    
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-style: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+input, select ,textarea{
+    padding: 6px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 15px;
+}
+input:focus{
+    outline-color: rgba(156, 80, 249, 0.836);
+}
+.button_container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+button{
+  margin-right:20px;
+  background-color: rgb(177, 102, 247);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 5px;
+  outline:none;  
+  border: none;
+  transition: 0.3s ease-in;
+}
+button:hover{
+    background-color: rgba(115, 0, 255, 0.836);
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.textarea_control{
+    grid-column: 1 / span 2;
+}
+
+.textarea_control textarea{
+    width: 100%;
+}
+
+@media (max-width: 460px){
+   .textarea_control{
+       grid-column: 1 / -1;
+   }
+}
